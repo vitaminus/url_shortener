@@ -1,0 +1,8 @@
+%h1 Short url maker
+= @short_link
+.row-fluid
+  .center
+    = form_for(@link) do |f|
+      = render 'fields', f: f
+      %br
+      = f.submit "To link short", class: "btn btn-large  btn-wide"

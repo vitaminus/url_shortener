@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  full_link: MyString
+  short_link: MyString
+  count: 1
+  password: MyString
+
+two:
+  full_link: MyString
+  short_link: MyString
+  count: 1
+  password: MyString

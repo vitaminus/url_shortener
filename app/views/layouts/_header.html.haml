@@ -1,0 +1,10 @@
+%header.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container-fluid
+      = link_to "Links Shorterer", root_path, id: "logo"
+      %nav
+        %ul.nav.pull-right
+          %li= link_to "Make short URL", root_path
+          - if logged_in?
+            %li= link_to "Admin page", admin_path
+      

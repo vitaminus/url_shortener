@@ -1,0 +1,6 @@
+= render 'shared/error_messages', object: f.object
+= f.text_field :full_link, placeholder: "Enter URL", class: "input-xxlarge"
+= f.password_field :password, placeholder: "Enter password, between 8 and 20 signs", class: "input-password"
+%br
+= f.check_box :private
+= f.label :private, "Make private"

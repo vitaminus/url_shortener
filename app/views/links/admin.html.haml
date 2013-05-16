@@ -1,0 +1,24 @@
+- provide(:title, 'Link management')
+%h1 Link management
+.row-fluid
+%table.table.table-bordered
+  %tr
+    %th Original URL
+    %th Shortened URL
+    %th Date Created
+    %th Usage Count
+    %th Action
+  - @links.each do |link|
+    %tr
+      %td
+        = link_to link.full_link, link.full_link
+      %td  
+        = link_to "#{root_url}#{link.short_link}", "#{root_url}#{link.short_link}"
+      %td
+        = link.created_at.strftime("%B %d %Y")
+      %td
+        .center
+          = link.counter
+      %td
+        = link_to 'Delete', link, confirm: "Are you sure?", method: :delete
+= will_paginate @links, renderer: BootstrapPagination::Rails
