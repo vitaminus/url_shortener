@@ -4,7 +4,7 @@ gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.1'
 gem 'haml-rails'
 gem 'will_paginate'
-gem 'bootstrap-will_paginate'
+gem 'will_paginate-bootstrap'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

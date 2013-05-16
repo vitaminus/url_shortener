@@ -28,7 +28,7 @@ class LinksController < ApplicationController
   end
 
   def admin
-    @links = Link.page(params[:page]).per_page(10)
+    @links = Link.page(params[:page]).per_page(5)
   end
 
   def destroy
