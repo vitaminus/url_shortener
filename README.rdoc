@@ -1,4 +1,4 @@
-== Welcome to Links Shorterer ==
+== Welcome to Links Shorterer
 
 This is a test application
 
