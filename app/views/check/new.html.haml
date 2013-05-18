@@ -1,0 +1,6 @@
+%h2 This link is password protected
+.row-fluid
+  .center
+    = form_for new_check_path do |f|
+      = f.password_field :check_password, placeholder: "Enter password", class: "input-password"
+      = f.submit "Go", class: "btn btn-large"

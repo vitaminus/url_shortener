@@ -11,7 +11,7 @@
   - @links.each do |link|
     %tr
       %td
-        = link_to link.full_link, link.full_link
+        = link_to truncate(link.full_link, :length => 60, :omission => "..."), link.full_link
       %td  
         = link_to "#{root_url}#{link.short_link}", "#{root_url}#{link.short_link}"
       %td

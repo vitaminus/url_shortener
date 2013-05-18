@@ -1,8 +1,9 @@
 # encoding: UTF-8
 class Link < ActiveRecord::Base
+  attr_accessor :password_check
   attr_accessible :full_link, :password, :private
-
-  before_save :secure_password
+  
+  before_save :password_not_empty
   before_save :create_short_url
 
   VALID_URL = /(^$)|(^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$)/
@@ -19,16 +20,13 @@ class Link < ActiveRecord::Base
 
   private
 
-    def secure_password
-      if self.password?
-        self.password = SecureRandom.urlsafe_base64
-      else
-        self.password = nil
-      end
+    def password_not_empty
+      self.password = nil if self.password.blank?
     end
 
     def create_short_url
-      self.short_link ||= Digest::MD5.hexdigest(self.full_link + "aadamkmmsakd").slice(0..6)
+      chars = [('a'..'z'),('A'..'Z'),('0'..'9')].map(&:to_a).flatten
+      self.short_link = chars.shuffle[0..4].join
     end
 
 end

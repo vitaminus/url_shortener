@@ -28,7 +28,11 @@ class LinksController < ApplicationController
   end
 
   def admin
-    @links = Link.page(params[:page]).per_page(5)
+    if authenticate
+      @links = Link.page(params[:page]).per_page(10)
+    else
+      redirect_to root_path
+    end
   end
 
   def destroy
