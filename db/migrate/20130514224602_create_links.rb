@@ -1,7 +1,7 @@
 class CreateLinks < ActiveRecord::Migration
   def change
     create_table :links do |t|
-      t.string :full_link
+      t.text :full_link
       t.string :short_link
       t.integer :counter, default: 0
       t.boolean :private

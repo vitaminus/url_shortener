@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130514224602) do
 
   create_table "links", :force => true do |t|
-    t.string   "full_link"
+    t.text     "full_link"
     t.string   "short_link"
     t.integer  "counter",    :default => 0
     t.boolean  "private"
