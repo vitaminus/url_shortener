@@ -7,13 +7,14 @@
       = f.submit "To link short", class: "btn btn-large  btn-wide"
 %hr
 .row-fluid
-  .offset3.span8
+  .offset2.span8
     - @links.each do |link|
       %blockquote
         %h5
           = link_to "#{root_url}#{link.short_link}", "#{root_url}#{link.short_link}"
-          .click
+          .click.pull-right.btn.btn-primary.disabled
             = link.counter 
             click
         %small
           = truncate(link.full_link, length: 60, omission: "...")
+    = will_paginate @links, renderer: BootstrapPagination::Rails

@@ -111,6 +111,9 @@ GEM
     will_paginate (3.0.4)
     will_paginate-bootstrap (0.2.2)
       will_paginate (>= 3.0.3)
+    zclip-rails (0.0.1)
+      jquery-rails (>= 1.0.17)
+      railties (~> 3.1)
 
 PLATFORMS
   ruby
@@ -128,3 +131,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   will_paginate
   will_paginate-bootstrap
+  zclip-rails

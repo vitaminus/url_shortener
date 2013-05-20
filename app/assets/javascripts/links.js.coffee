@@ -6,10 +6,9 @@ jQuery ->
     $('#link_password').show()
   else
     $('#link_password').hide()
+  
   $('#link_private').change ->
     if(this.checked)
       $('#link_password').fadeIn('slow')
     else
       $('#link_password').fadeOut('slow')
-
-  

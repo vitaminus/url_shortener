@@ -6,6 +6,7 @@ gem 'haml-rails'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'bcrypt-ruby'
+gem 'zclip-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
