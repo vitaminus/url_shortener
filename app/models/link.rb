@@ -26,7 +26,7 @@ class Link < ActiveRecord::Base
 
     def create_short_url
       chars = [('a'..'z'),('A'..'Z'),('0'..'9')].map(&:to_a).flatten
-      self.short_link = chars.shuffle[0..4].join
+      self.short_link = chars.shuffle[0..5].join
     end
 
 end

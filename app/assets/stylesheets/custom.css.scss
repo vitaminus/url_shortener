@@ -14,7 +14,7 @@ body {
   padding-top: 60px;
   font-family: sans-serif;
   font-size: 16px;
-  max-width: 1170px;
+  max-width: 900px;
   margin: 0 auto;
   //background-image: url(body-bg.jpg);
 }
@@ -77,7 +77,7 @@ p {
 /* header */
 
 .container-fluid{
-  max-width: 1130px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -187,4 +187,9 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 label.inline {
   display: inline-block;
+}
+
+.click {
+  margin-left: 20px;
+  display: inline;
 }

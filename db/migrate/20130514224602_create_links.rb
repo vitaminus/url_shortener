@@ -6,6 +6,7 @@ class CreateLinks < ActiveRecord::Migration
       t.integer :counter, default: 0
       t.boolean :private
       t.string :password
+      t.string :ip
 
       t.timestamps
     end

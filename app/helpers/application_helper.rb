@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def full_title(page_title)
-    base_title = "Links Shorterer"
+    base_title = "Links Shortener"
     if page_title.empty?
       base_title
     else

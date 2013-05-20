@@ -5,3 +5,15 @@
       = render 'fields', f: f
       %br
       = f.submit "To link short", class: "btn btn-large  btn-wide"
+%hr
+.row-fluid
+  .offset3.span8
+    - @links.each do |link|
+      %blockquote
+        %h5
+          = link_to "#{root_url}#{link.short_link}", "#{root_url}#{link.short_link}"
+          .click
+            = link.counter 
+            click
+        %small
+          = truncate(link.full_link, length: 60, omission: "...")

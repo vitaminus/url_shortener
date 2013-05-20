@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130514224602) do
     t.integer  "counter",    :default => 0
     t.boolean  "private"
     t.string   "password"
+    t.string   "ip"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
   end

@@ -1,6 +1,7 @@
 # encoding: UTF-8
 class LinksController < ApplicationController
   before_filter :authenticate, only: :admin
+  before_filter :ip, only: :new
 
   def new
     @link = Link.new
@@ -19,6 +20,7 @@ class LinksController < ApplicationController
 
   def create
     @link = Link.new(params[:link])
+    @link.ip = request.remote_ip
     if @link.save
       flash[:success] = "Short link created: #{root_url}#{@link.short_link}"
       redirect_to root_path

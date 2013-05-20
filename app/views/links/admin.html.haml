@@ -6,6 +6,7 @@
     %th Original URL
     %th Shortened URL
     %th Date Created
+    %th Ip
     %th Usage Count
     %th Action
   - @links.each do |link|
@@ -16,6 +17,8 @@
         = link_to "#{root_url}#{link.short_link}", "#{root_url}#{link.short_link}"
       %td
         = link.created_at.strftime("%B %d %Y")
+      %td
+        = link.ip
       %td
         .center
           = link.counter
